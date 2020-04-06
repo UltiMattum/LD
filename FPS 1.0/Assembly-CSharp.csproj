@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\First Person Mechanic\Scripts\GunTargetScript.cs" />
     <Compile Include="Assets\First Person Mechanic\Scripts\MouseLook.cs" />
     <Compile Include="Assets\First Person Mechanic\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\First Person Mechanic\Scripts\ShootingScript.cs" />
