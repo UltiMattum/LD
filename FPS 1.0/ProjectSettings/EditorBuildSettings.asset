@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/First Person Mechanic/LD1.unity
+    path: Assets/1.0.0/Main/Scenes/LD1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
