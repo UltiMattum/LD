@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
 {
-    private float Damage = 12f;
-    private float Range = 100;
+    // private float Range = 100;
     public Camera fpsCAM;
+    public Transform Gunsform;
+    public Rigidbody bullet;
+    public float bulletSpeed;
 
     void Update()
     {
@@ -18,11 +20,16 @@ public class ShootingScript : MonoBehaviour
 
      void Shoot()
     {
-        RaycastHit hit;
+        Rigidbody bulletFired;
+        // RaycastHit hit;
+        /*
         if(Physics.Raycast(fpsCAM.transform.position, fpsCAM.transform.forward, out hit, Range))
         {
             Debug.Log(hit.transform.name);
         }
+        */
+        bulletFired = Instantiate(bullet, Gunsform.position, Gunsform.rotation);
+        bulletFired.velocity = transform.TransformDirection(Vector3.forward*bulletSpeed);
         
     }
 }

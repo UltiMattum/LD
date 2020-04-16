@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour {
     void Update(){
         Jump();
         Move();
+        // Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
     }
 
     void Jump(){
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour {
         // the y component is zero
         if (isGrounded){
             playerRigidBody.AddRelativeForce(Input.GetAxis("Horizontal") * acceleration, 0, Input.GetAxis("Vertical") * acceleration);
+            
         }
         // Player can still move but velocity can be slowed/sped depending on the walkAccelerationRatio
         else{
@@ -62,12 +64,13 @@ public class PlayerMovement : MonoBehaviour {
         }
         // Code for stopping the player. This is the use for the separate float and Vector2.
         // It damps the velocity through other variables before assigning it.
+        /*
         if (isGrounded)
         {
             float xMove = Mathf.SmoothDamp(playerRigidBody.velocity.x, 0, ref walkDeaccelerateX, deaccelerate);
             float zMove = Mathf.SmoothDamp(playerRigidBody.velocity.z, 0, ref walkDeaccelerateZ, deaccelerate);
             playerRigidBody.velocity = new Vector3(xMove, playerRigidBody.velocity.y, zMove);        
-        }
+        }*/
 
     }
     // Turns isGrounded to true when collision is made
